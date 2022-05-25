@@ -1,4 +1,222 @@
+@font-face {
+  font-family: "MuseoSans100";
+  src: local("Museo Sans 100"), local("Museo-Sans-100"),
+    url("../fonts/MuseoSansCyrl-100.woff2") format("woff2"),
+    url("../fonts/MuseoSansCyrl-100.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl-100.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoSans300";
+  src: local("Museo Sans 300"), local("Museo-Sans-300"),
+    url("../fonts/MuseoSansCyrl-300.woff2") format("woff2"),
+    url("../fonts/MuseoSansCyrl-300.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoSans700";
+  src: local("Museo Sans 700"), local("Museo-Sans-700"),
+    url("../fonts/MuseoSansCyrl-700.woff2") format("woff2"),
+    url("../fonts/MuseoSansCyrl-700.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+body {
+  height: 660px;
+  background-image: url(../img/fon.png);
+  font-family: "MuseoSans300";
+
+  //   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.planet {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__line {
+    position: absolute;
+    top: 260px;
+    left: -211px;
+  }
+}
+.header {
+  height: 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__top {
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  &__link {
+    position: relative;
+    top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 40px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 12px;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      color: #b1b1b1;
+      border-bottom: 1px solid #b1b1b1;
+    }
+  }
+}
+.promo {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    margin-top: 120px;
+    z-index: 0;
+  }
+  &__left-heading {
+    font-size: 58px;
+    font-family: "MuseoSans700";
+    color: #ffffff;
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 60, 0, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__left-text {
+    font-size: 25px;
+    font-weight: 300;
+    color: #ffffff;
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 60, 0, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__btn {
+    position: relative;
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 90px;
+    background-color: transparent;
+    border: 1px solid #24589c;
+    padding: 10px 25px;
+    color: #b1b1b1;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  &__btn-r {
+    position: absolute;
+    top: -17px;
+    right: -17px;
+  }
+  &__btn-l {
+    position: absolute;
+    left: -16px;
+    bottom: -16px;
+  }
+  &__right {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 380px;
+    margin-top: 60px;
+  }
+  &__card {
+    width: 185px;
+    height: 185px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__card--1 {
+    background: linear-gradient(
+      145deg,
+      rgba(91, 134, 210, 0) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  &__card--2 {
+    background: linear-gradient(
+      225deg,
+      rgba(91, 134, 210, 0) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  &__card--3 {
+    background: linear-gradient(
+      45deg,
+      rgba(91, 134, 210, 0) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  &__card--4 {
+    background: linear-gradient(
+      315deg,
+      rgba(91, 134, 210, 0) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  &__text {
+    color: #b1b1b1;
+    font-family: "MuseoSans100";
+  }
+  &__text-large {
+    color: #ffffff;
+    padding-top: 15px;
+    font-size: 60px;
+    font-family: "MuseoSans700";
+    span {
+      font-size: 20px;
+    }
+  }
 }

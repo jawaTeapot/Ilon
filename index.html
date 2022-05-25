@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
-
-</body>
-
+  <body>
+    <div class="planet">
+      <img src="./img/planet.png" alt="img" />
+      <img class="planet__line" src="./img/line.png" alt="-" />
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <img src="./img/angle.png" alt="#" /><img
+            class="header__img"
+            src="./img/logo.png"
+            alt="logo"
+          />
+        </div>
+        <nav class="nav">
+          <a class="nav__link" href="#">Главная</a>
+          <a class="nav__link" href="#">Технология</a>
+          <a class="nav__link" href="#">График полетов</a>
+          <a class="nav__link" href="#">Гарантии</a>
+          <a class="nav__link" href="#">О компании</a>
+          <a class="nav__link" href="#">Контакты</a>
+        </nav>
+      </div>
+    </header>
+    <section class="promo container">
+      <div class="promo__left">
+        <h1 class="promo__left-heading">ПУТЕШЕСТВИЕ</h1>
+        <p class="promo__left-text">на красную планету</p>
+        <button class="promo__btn">
+          Начать путешествие
+          <img class="promo__btn-r" src="./img/flash-right.png" alt=">" />
+          <img class="promo__btn-l" src="./img/flash-left.png" alt="<" />
+        </button>
+      </div>
+      <div class="promo__right">
+        <div class="promo__card promo__card--1">
+          <p class="promo__text">мы</p>
+          <p class="promo__text-large">1</p>
+          <p class="promo__text">на рынке</p>
+        </div>
+        <div class="promo__card promo__card--2">
+          <p class="promo__text">гарантируем</p>
+          <p class="promo__text-large">50%</p>
+          <p class="promo__text">безопасность</p>
+        </div>
+        <div class="promo__card promo__card--3">
+          <p class="promo__text">календарик за</p>
+          <p class="promo__text-large">2001<span>г.</span></p>
+          <p class="promo__text">в подарок</p>
+        </div>
+        <div class="promo__card promo__card--4">
+          <p class="promo__text">путешествие</p>
+          <p class="promo__text-large">597</p>
+          <p class="promo__text">дней</p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
